@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int arr[100],c,n,ele;
+clrscr();
+printf("how many numbers u want to enter");
+scanf("%d",&n);
+printf("enter %d numbers",n);
+for(c=0;c<n;c++)
+scanf("%d",&arr[c]);
+printf("entered numbers are\n");
+for(c=0;c<n;c++)
+printf("number are %d\n",arr[c]);
+printf("enter a number to search\n");
+scanf("%d",&ele);
+for(c=0;c<n;c++)
+{
+if(arr[c]==ele)
+{
+  printf("%d is present at location %d \n",ele,c+1);
+  break;
+  }
+}
+if(c==n)
+printf("%d is not present in the array\n",ele);
+getch();
+}
